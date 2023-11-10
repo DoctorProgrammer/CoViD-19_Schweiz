@@ -1,0 +1,13 @@
+/**
+ * Author: Robin Trachsel
+ * version: 1.0
+ * date: 2023-11-10
+ * 
+ * Description: CSS-Style for the style of the website
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
