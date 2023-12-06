@@ -10,4 +10,171 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+:root {
+    --border-color: #ccc;
+    --color-text: #08376B;
+}
+
+main {
+    padding-top: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    padding: 1rem;
+    min-height: 100px;
+    width: 100vw;
+    margin: 0;
+    z-index: 1;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    background-color: white;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+#dropdown-content {
+    height: 0px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#dropdown-content a {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    color: var(--color-text);
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown-content > a:hover {
+    background-color: #08366b18;
+}
+
+#dropdown-content div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-element {
+    background-color: #0075fa18;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.product-element:hover {
+    background-color: #0075fa30;
+    cursor: pointer;
+}
+
+.product-element img {
+    height: 140px;
+}
+
+main section {
+    width: 60%;
+    padding: 5%;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    height: 30rem;
+}
+
+#title img {
+    height: 100%;
+}
+
+#collection ul {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'menu main right'
+    'menu footer footer';
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#collection ul li {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-color: beige;
+}
+
+#item1 {
+    grid-area: header;
+    background-image: url('../images/chillcorner.png');
+    background-size: cover;
+}
+
+#item2 {
+    grid-area: menu;
+    background-image: url('../images/simpleclub.jpg');
+    background-size: cover;
+}
+
+#item3 {
+    grid-area: main;
+    background-image: url('../images/chillcorner.png');
+    background-size: cover;
+    aspect-ratio: 1/1;
+}
+
+#item4 {
+    grid-area: right;
+    background-image: url('../images/chillcorner.png');
+    background-size: cover;
+}
+
+#item5 {
+    grid-area: footer;
+    background-image: url('../images/chillcorner.png');
+    background-size: cover;
 }
