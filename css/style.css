@@ -19,6 +19,10 @@
     --color-text: #08376B;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 main {
     padding-top: 100px;
     width: 100vw;
@@ -72,17 +76,7 @@ nav ul li {
     margin: 0 1rem;
     display: flex;
     flex-direction: row;
-}
-
-#dropdown-content a {
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 10px;
-    color: var(--color-text);
-    transition: all 0.1s ease-in-out;
-    text-decoration: none;
-    display: block;
+    justify-content: center;
 }
 
 #dropdown-content ul {
@@ -100,10 +94,46 @@ nav ul li {
     align-items: center;
 }
 
+#dropdown-content ol li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#dropdown-content ol li h3 {
+    padding-bottom: 1rem;
+}
+
+#dropdown-content ol li a {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    color: var(--color-text);
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown-content ol li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+#dropdown-content ol:last-child {
+    border-left: 1px solid var(--border-color);
+}
+
+#dropdown-content ol li a:hover {
+    background-color: #08366b18;
+}
+
 .product-element {
     background-color: #0075fa18;
+    border-radius: 10px;
+    padding: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    text-decoration: none;
 }
 
 .product-element:hover {
@@ -113,6 +143,12 @@ nav ul li {
 
 .product-element img {
     height: 140px;
+}
+
+.product-element p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
 }
 
 main section {
