@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if(id.innerHTML != content.innerHTML) {
                 id.innerHTML = content.innerHTML;
-                id.style.height = '200px';
+                id.style.height = '250px';
                 id.style.margin = '1rem 1rem';
             } else {
                 id.innerHTML = '';
