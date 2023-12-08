@@ -10,11 +10,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const logo = document.getElementById('logo');
 
     const navButtons = document.querySelectorAll('.dropbtn');
-    const dropdownContent = document.querySelectorAll('.dropdown-content');
+
+    const light = document.getElementById('light');
 
     logo.addEventListener('click', function() {
         // go to startpage
         window.location.href = '/';
+    });
+
+    light.addEventListener('click', function() {
+        if(light.attributes.src.value == './images/moon.png') {
+            light.attributes.src.value = './images/sun.png';
+            // change variables in css
+            /*
+            --border-color: #ccc;
+            --color-text: #08376B;
+            --color-link: #780000;
+            --color-product: #0075fa18;
+            --color-hover: #c1121e16;
+            --background-color: #ffffff;
+            --footer-color: #fdf0d5;
+            */
+            document.documentElement.style.setProperty('--border-color', '#ccc');
+            document.documentElement.style.setProperty('--color-text', '#08376B');
+            document.documentElement.style.setProperty('--color-link', '#780000');
+            document.documentElement.style.setProperty('--color-product', '#0075fa18');
+            document.documentElement.style.setProperty('--color-hover', '#c1121e16');
+            document.documentElement.style.setProperty('--background-color', '#ffffff');
+            document.documentElement.style.setProperty('--footer-color', '#fdf0d5');
+        } else {
+            light.attributes.src.value = './images/moon.png';
+            // change variables in css
+            document.documentElement.style.setProperty('--border-color', '#282828');
+            document.documentElement.style.setProperty('--color-text', 'white');
+            document.documentElement.style.setProperty('--color-link', '#404048');
+            document.documentElement.style.setProperty('--color-product', '#');
+            document.documentElement.style.setProperty('--color-hover', '#501820');
+            document.documentElement.style.setProperty('--background-color', '#181818');
+            document.documentElement.style.setProperty('--footer-color', '#191919');
+        }
     });
 
     navButtons.forEach(function(button) {

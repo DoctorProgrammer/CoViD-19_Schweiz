@@ -17,10 +17,22 @@
 :root {
     --border-color: #ccc;
     --color-text: #08376B;
+    --color-link: #780000;
+    --color-product: #0075fa18;
+    --color-hover: #c1121e16;
+    --background-color: #ffffff;
+    --footer-color: #fdf0d5;
 }
 
 body {
     overflow-x: hidden;
+    background-color: var(--background-color);
+}
+
+#blue-dot {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 main {
@@ -29,6 +41,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    backdrop-filter: blur(100px);
 }
 
 nav {
@@ -39,11 +52,17 @@ nav {
     z-index: 1;
     border-bottom: 1px solid var(--border-color);
     position: fixed;
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 #logo {
     width: 333px;
+}
+
+#light {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 nav ul {
@@ -64,7 +83,7 @@ nav ul li {
     font-size: 20px;
     font-weight: 600;
     border: none;
-    background-color: white;
+    background-color: var(--background-color);
     color: var(--color-text);
     cursor: pointer;
 }
@@ -110,8 +129,20 @@ nav ul li {
     flex-direction: column;
 }
 
-#dropdown-content > a:hover {
-    background-color: #08366b18;
+a {
+    color: var(--color-link)
+}
+
+a:hover {
+    background-color: var(--color-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+}
+
+p1, p2, p3, p4, p5, p6 {
+    color: var(--color-text);
 }
 
 #dropdown-content div {
@@ -134,7 +165,6 @@ nav ul li {
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 10px;
-    color: var(--color-text);
     transition: all 0.1s ease-in-out;
     text-decoration: none;
     display: block;
@@ -142,19 +172,14 @@ nav ul li {
 
 #dropdown-content > ol > li > a {
     text-decoration: none;
-    color: var(--color-text);
 }
 
 #dropdown-content > ol:last-child {
     border-left: 1px solid var(--border-color);
 }
 
-#dropdown-content > ol > li > a:hover {
-    background-color: #08366b18;
-}
-
 .product-element {
-    background-color: #0075fa18;
+    background-color: var(--color-product);
     border-radius: 10px;
     padding: 10px;
     margin-left: 5px;
@@ -163,7 +188,7 @@ nav ul li {
 }
 
 .product-element:hover {
-    background-color: #0075fa30;
+    background-color: var(--color-hover);
     cursor: pointer;
 }
 
@@ -235,6 +260,36 @@ main section {
     grid-area: footer;
     background-image: url('../images/chillcorner.png');
     background-size: cover;
+}
+
+footer {
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--footer-color);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+}
+
+footer ul {
+    padding: 2rem;
+}
+
+footer ul li {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+footer ul li:first-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
 @media (max-width: 1100px) {
