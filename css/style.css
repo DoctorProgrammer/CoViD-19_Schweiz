@@ -43,7 +43,6 @@ nav {
 }
 
 #logo {
-    aspect-ratio: 6/1;
     width: 333px;
 }
 
@@ -269,5 +268,9 @@ main section {
 
     #logo {
         width: 40%;
+    }
+
+    .dropbtn {
+        font-size: 1rem;
     }
 }
