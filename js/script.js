@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const light = document.getElementById('light');
 
+    const arrows = document.getElementsByClassName('arrow');
+
     logo.addEventListener('click', function() {
         // go to startpage
         window.location.href = '/';
@@ -43,11 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // change variables in css
             document.documentElement.style.setProperty('--border-color', '#282828');
             document.documentElement.style.setProperty('--color-text', 'white');
-            document.documentElement.style.setProperty('--color-link', '#404048');
+            document.documentElement.style.setProperty('--color-link', '#780000');
             document.documentElement.style.setProperty('--color-product', '#');
             document.documentElement.style.setProperty('--color-hover', '#501820');
             document.documentElement.style.setProperty('--background-color', '#181818');
-            document.documentElement.style.setProperty('--footer-color', '#191919');
+            document.documentElement.style.setProperty('--footer-color', '#282828');
+            arrows.forEach(function(arrow) {
+                arrow.style.color = 'white';
+            });
         }
     });
 
