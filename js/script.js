@@ -7,6 +7,7 @@
  */
 
 function darkMode() {
+    // put lightmode to darkmode
     const light = document.getElementById('light');
     const arrows = document.getElementsByClassName('arrow');
 
@@ -30,6 +31,7 @@ function darkMode() {
 }
 
 function lightMode() {
+    // put darkmode to lightmode
     const light = document.getElementById('light');
     const arrows = document.getElementsByClassName('arrow');
 
@@ -54,7 +56,6 @@ function lightMode() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const logo = document.getElementById('logo');
-
     const navButtons = document.querySelectorAll('.dropbtn');
 
     light.addEventListener('click', function() {
