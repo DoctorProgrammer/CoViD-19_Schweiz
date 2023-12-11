@@ -42,7 +42,8 @@ main {
     flex-direction: column;
     align-items: center;
     backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    -moz-backdrop-filter: blur(100px);
 }
 
 nav {
