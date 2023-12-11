@@ -42,6 +42,7 @@ main {
     flex-direction: column;
     align-items: center;
     backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
 }
 
 nav {
@@ -180,6 +181,7 @@ p1, p2, p3, p4, p5, p6 {
 
 .product-element {
     background-color: var(--color-product);
+    background-color: var(--color-product);
     border-radius: 10px;
     padding: 10px;
     margin-left: 5px;
@@ -188,6 +190,7 @@ p1, p2, p3, p4, p5, p6 {
 }
 
 .product-element:hover {
+    background-color: var(--color-hover);
     background-color: var(--color-hover);
     cursor: pointer;
 }
