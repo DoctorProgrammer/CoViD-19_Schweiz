@@ -6,54 +6,68 @@
  * Description: Script for the style of the website
  */
 
+function darkMode() {
+    const light = document.getElementById('light');
+    const arrows = document.getElementsByClassName('arrow');
+
+    light.attributes.src.value = './images/moon.png';
+    light.style.filter = 'invert(100%)';
+    document.documentElement.style.setProperty('--border-color', '#282828');
+    document.documentElement.style.setProperty('--color-text', 'white');
+    document.documentElement.style.setProperty('--color-link', '#780000');
+    document.documentElement.style.setProperty('--color-product', '#');
+    document.documentElement.style.setProperty('--color-hover', '#501820');
+    document.documentElement.style.setProperty('--background-color', '#181818');
+    document.documentElement.style.setProperty('--footer-color', '#282828');
+
+    for(let i = 0; i < arrows.length; i++) {
+        arrows[i].style.filter = 'invert(100%)';
+    }
+    
+    document.cookie = 'darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'darkmode=true; 31 Dec 9999 23:59:59 GMT';
+    console.log(document.cookie);
+}
+
+function lightMode() {
+    const light = document.getElementById('light');
+    const arrows = document.getElementsByClassName('arrow');
+
+    light.attributes.src.value = './images/sun.png';
+    light.style.filter = 'invert(0)';
+    document.documentElement.style.setProperty('--border-color', '#ccc');
+    document.documentElement.style.setProperty('--color-text', '#08376B');
+    document.documentElement.style.setProperty('--color-link', '#780000');
+    document.documentElement.style.setProperty('--color-product', '#0075fa18');
+    document.documentElement.style.setProperty('--color-hover', '#c1121e16');
+    document.documentElement.style.setProperty('--background-color', '#ffffff');
+    document.documentElement.style.setProperty('--footer-color', '#fdf0d5');
+
+    for(let i = 0; i < arrows.length; i++) {
+        arrows[i].style.filter = 'invert(0)';
+    }
+
+    document.cookie = 'darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'darkmode=false; 31 Dec 9999 23:59:59 GMT';
+    console.log(document.cookie);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const logo = document.getElementById('logo');
 
     const navButtons = document.querySelectorAll('.dropbtn');
 
-    const light = document.getElementById('light');
-
-    const arrows = document.getElementsByClassName('arrow');
+    light.addEventListener('click', function() {
+        if(light.attributes.src.value == './images/moon.png') {
+            lightMode();
+        } else {
+            darkMode();
+        }
+    });
 
     logo.addEventListener('click', function() {
         // go to startpage
         window.location.href = '/';
-    });
-
-    light.addEventListener('click', function() {
-        if(light.attributes.src.value == './images/moon.png') {
-            light.attributes.src.value = './images/sun.png';
-            // change variables in css
-            /*
-            --border-color: #ccc;
-            --color-text: #08376B;
-            --color-link: #780000;
-            --color-product: #0075fa18;
-            --color-hover: #c1121e16;
-            --background-color: #ffffff;
-            --footer-color: #fdf0d5;
-            */
-            document.documentElement.style.setProperty('--border-color', '#ccc');
-            document.documentElement.style.setProperty('--color-text', '#08376B');
-            document.documentElement.style.setProperty('--color-link', '#780000');
-            document.documentElement.style.setProperty('--color-product', '#0075fa18');
-            document.documentElement.style.setProperty('--color-hover', '#c1121e16');
-            document.documentElement.style.setProperty('--background-color', '#ffffff');
-            document.documentElement.style.setProperty('--footer-color', '#fdf0d5');
-        } else {
-            light.attributes.src.value = './images/moon.png';
-            // change variables in css
-            document.documentElement.style.setProperty('--border-color', '#282828');
-            document.documentElement.style.setProperty('--color-text', 'white');
-            document.documentElement.style.setProperty('--color-link', '#780000');
-            document.documentElement.style.setProperty('--color-product', '#');
-            document.documentElement.style.setProperty('--color-hover', '#501820');
-            document.documentElement.style.setProperty('--background-color', '#181818');
-            document.documentElement.style.setProperty('--footer-color', '#282828');
-            arrows.forEach(function(arrow) {
-                arrow.style.color = 'white';
-            });
-        }
     });
 
     navButtons.forEach(function(button) {
@@ -73,4 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // check if cookie darkmode is set to true
+    if(document.cookie == 'darkmode=true') {
+        darkMode();
+    };
 });
