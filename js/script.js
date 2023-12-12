@@ -26,7 +26,7 @@ function darkMode() {
     }
     
     document.cookie = 'darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    document.cookie = 'darkmode=true; 31 Dec 9999 23:59:59 GMT';
+    document.cookie = 'darkmode=true; 31 Dec 9999 23:59:59 GMT; path=/;';
     console.log(document.cookie);
 }
 
@@ -50,7 +50,7 @@ function lightMode() {
     }
 
     document.cookie = 'darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    document.cookie = 'darkmode=false; 31 Dec 9999 23:59:59 GMT';
+    document.cookie = 'darkmode=false; 31 Dec 9999 23:59:59 GMT; path=/;';
     console.log(document.cookie);
 }
 
