@@ -5,3 +5,99 @@
  * 
  * Description: CSS-Style for the style of the website
  */
+
+ :root {
+    --border-color: #ccc;
+    --color-text: #08376B;
+    --color-link: #780000;
+    --color-product: #0075fa18;
+    --color-hover: #c1121e16;
+    --background-color: #ffffff;
+    --footer-color: #d5e7fd;
+ }
+ 
+ main {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+ }
+ 
+ main div {
+    padding: 1rem;
+ }
+ 
+ #autor {
+    border-left: 1px solid var(--border-color);
+    height: fit-content;
+ }
+ 
+ #autor img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+ }
+ 
+ .image {
+    width: 100%;
+    margin: 4rem 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+ }
+ 
+ .image img {
+    max-height: 80vh;
+    max-width: 80%;
+ }
+ 
+ .comment {
+    float: right;
+    padding: 1rem;
+ }
+ 
+ p {
+    color: var(--color-text)
+ }
+ 
+ p1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+ }
+ 
+ p2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+ }
+ 
+ h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+ }
+ 
+ h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+ }
+ 
+ @media (max-width: 1000px) {
+    main {
+       grid-template-columns: 1fr;
+    }
+ 
+    .image img {
+       max-width: 100%;
+    }
+ 
+    #autor img {
+       max-width: 50%;
+    }
+ }
+ 
+ @media (max-width: 600px) {
+    main {
+       width: 90vw;
+       margin: 0;
+    }
+ }

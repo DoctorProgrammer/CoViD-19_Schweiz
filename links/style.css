@@ -6,6 +6,16 @@
  * Description: CSS-Style for the style of the website
  */
 
+:root {
+   --border-color: #ccc;
+   --color-text: #08376B;
+   --color-link: #780000;
+   --color-product: #0075fa18;
+   --color-hover: #c1121e16;
+   --background-color: #ffffff;
+   --footer-color: #d5e7fd;
+}
+
 main {
    width: 60vw;
    display: grid;
@@ -17,7 +27,7 @@ main div {
 }
 
 #autor {
-   border-left: 1px solid #ccc;
+   border-left: 1px solid var(--border-color);
    height: fit-content;
 }
 
@@ -45,6 +55,10 @@ main div {
    padding: 1rem;
 }
 
+p {
+   color: var(--color-text)
+}
+
 p1 {
    font-size: 1.5rem;
    font-weight: bold;
@@ -54,7 +68,6 @@ p1 {
 p2 {
    font-size: 1.2rem;
    margin-bottom: 1rem;
-   color: black;
 }
 
 h1 {

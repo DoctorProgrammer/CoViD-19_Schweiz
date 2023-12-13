@@ -65,7 +65,7 @@ nav {
 
 #logo {
     width: 333px;
-    content: url('../images/logo-transparent.png');
+    content: url('../../images/logo-transparent.png');
 }
 
 #light {
@@ -255,7 +255,7 @@ footer ul li a {
 
 @media (max-width: 650px) {
     #logo {
-        content: url('../images/Icon-transparent.png');
+        content: url('../../images/Icon-transparent.png');
         width: 20%;
     }
 
