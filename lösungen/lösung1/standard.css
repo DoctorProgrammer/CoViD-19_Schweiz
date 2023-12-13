@@ -21,11 +21,13 @@
     --color-product: #0075fa18;
     --color-hover: #c1121e16;
     --background-color: #ffffff;
-    --footer-color: #fdf0d5;
+    --footer-color: #d5e7fd;
 }
 
 body {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     max-width: 100vw;
     background-color: var(--background-color);
 }
@@ -44,8 +46,8 @@ main {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
+    align-self: center;
 }
 
 nav {
@@ -61,7 +63,7 @@ nav {
 
 #logo {
     width: 333px;
-    content: url('../../images/logo-transparent.png');
+    content: url('../images/logo-transparent.png');
 }
 
 #light {
@@ -212,6 +214,7 @@ footer {
     width: 100vw;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    margin-top: 5rem;
     background-color: var(--footer-color);
     color: var(--color-text);
     display: flex;
@@ -248,7 +251,7 @@ footer ul li a {
 
 @media (max-width: 650px) {
     #logo {
-        content: url('../../images/Icon-transparent.png');
+        content: url('../images/Icon-transparent.png');
         width: 20%;
     }
 
