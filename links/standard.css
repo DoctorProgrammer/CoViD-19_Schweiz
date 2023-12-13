@@ -12,6 +12,8 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     list-style: none;
+    scroll-behavior: smooth;
+    scroll-margin: 150px;
 }
 
 :root {
@@ -137,7 +139,9 @@ nav ul li {
 }
 
 a {
-    color: var(--color-link)
+    color: var(--color-link);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 a:hover {
