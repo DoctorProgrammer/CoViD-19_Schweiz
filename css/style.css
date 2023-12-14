@@ -163,6 +163,10 @@ p1 {
     padding-right: 0.5rem;
 }
 
+#dropdown-content ol {
+    height: 100%;
+}
+
 #dropdown-content ol li h3 {
     padding-bottom: 1rem;
 }

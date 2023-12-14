@@ -165,6 +165,15 @@ p1 {
     flex-direction: row;
 }
 
+#dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown-content ol {
+    height: 100%;
+}
+
 #dropdown-content ol li {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

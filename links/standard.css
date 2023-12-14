@@ -133,6 +133,10 @@ nav ul li {
     margin: 0 1rem;
 }
 
+#dropdown-content ol {
+    height: 100%;
+}
+
 #dropdown-content ul {
     display: flex;
     flex-direction: column;
