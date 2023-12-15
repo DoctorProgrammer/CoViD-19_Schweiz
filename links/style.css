@@ -53,7 +53,7 @@ main div {
 
 .image img {
    max-height: 80vh;
-   max-width: 80%;
+   max-width: 100%;
 }
 
 .comment {

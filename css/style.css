@@ -6,12 +6,14 @@
  * Description: CSS-Style for the style of the website
  */
 
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     list-style: none;
+    scroll-behavior: smooth;
+    scroll-margin: 150px;
 }
 
 :root {
@@ -61,6 +63,7 @@ nav {
 #logo {
     width: 333px;
     content: url('../images/logo-transparent.png');
+    cursor: pointer;
 }
 
 #light {
