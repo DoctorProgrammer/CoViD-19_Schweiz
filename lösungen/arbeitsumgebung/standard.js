@@ -43,7 +43,7 @@ function lightMode() {
     document.documentElement.style.setProperty('--color-product', '#0075fa18');
     document.documentElement.style.setProperty('--color-hover', '#c1121e16');
     document.documentElement.style.setProperty('--background-color', '#ffffff');
-    document.documentElement.style.setProperty('--footer-color', '#fdf0d5');
+    document.documentElement.style.setProperty('--footer-color', '#d5e7fd');
 
     for(let i = 0; i < arrows.length; i++) {
         arrows[i].style.filter = 'invert(0)';

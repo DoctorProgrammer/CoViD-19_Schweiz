@@ -22,7 +22,7 @@ main {
    grid-template-columns: 4fr 1fr;
 }
 
-main div {
+main > div {
    padding: 2rem;
 }
 
