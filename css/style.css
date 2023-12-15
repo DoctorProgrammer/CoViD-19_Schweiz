@@ -241,28 +241,40 @@ main section {
 }
 
 #collection ul li {
-    padding: 20px;
     font-size: 30px;
     text-align: center;
     background-color: beige;
+    font-weight: bold;
+}
+
+#collection ul li h1 {
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    height: 100%;
+    color: unset;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 #item1 {
     grid-area: header;
-    background-image: url('../images/chillcorner.png');
+    background-image: url('../images/titelbild1.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 #item2 {
     grid-area: menu;
     background-image: url('../images/simpleclub.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 #item3 {
     grid-area: main;
-    background-image: url('../images/chillcorner.png');
+    background-image: url('../images/quizlet.jpg');
     background-size: cover;
+    background-position: center;
     aspect-ratio: 1/1;
 }
 
@@ -270,11 +282,12 @@ main section {
     grid-area: right;
     background-image: url('../images/chillcorner.png');
     background-size: cover;
+    background-position: center;
 }
 
 #item5 {
     grid-area: footer;
-    background-image: url('../images/chillcorner.png');
+    background-image: url('../images/lernziele.jpg');
     background-size: cover;
 }
 
