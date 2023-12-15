@@ -247,13 +247,14 @@ main section {
     font-weight: bold;
 }
 
-#collection ul li h1 {
-    padding: 20px;
+#collection ul li a {
+    display: block;
     font-size: 2rem;
     font-weight: 600;
     height: 100%;
-    color: unset;
-    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #item1 {
@@ -323,6 +324,12 @@ footer ul li a {
     border-radius: 10px;
 }
 
+@media (max-width: 1500px) {
+    #collection ul li a {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 1100px) {
     #title h1 {
         font-size: 2rem;
@@ -330,6 +337,10 @@ footer ul li a {
     
     #title {
         height: 20rem;
+    }
+    
+    #collection ul li a {
+        font-size: 1rem;
     }
 }
 
@@ -371,5 +382,10 @@ footer ul li a {
 
     footer ul li {
         margin-left: 1rem;
+    }
+
+    
+    #collection ul li a {
+        padding: 5px;
     }
 }
